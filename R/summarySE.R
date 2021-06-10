@@ -1,3 +1,18 @@
+#' Summarize For Whale Data
+#'
+#' Summarizes the measured variable (measurevar) using the grouping variable (groupvars)
+#' @param data
+#' @param measurevar
+#' @param groupvars
+#' @param na.rm
+#' @param conf.interval
+#' @param .drop
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' AllWhalesMaxSpdSummary <- summarySE(AllWhalesLungeTableTrunc, measurevar="MaxSpd", groupvars=c("whaleName"))
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
                       conf.interval=.95, .drop=TRUE) {
   length2 <- function (x, na.rm=FALSE) {
