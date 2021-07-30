@@ -13,6 +13,8 @@
 #'
 #' @examples
 #' AllWhalesMaxSpdSummary <- summarySE(AllWhalesLungeTableTrunc, measurevar="MaxSpd", groupvars=c("whaleName"))
+library(dplyr)
+
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
                       conf.interval=.95, .drop=TRUE) {
   length2 <- function (x, na.rm=FALSE) {
