@@ -3,19 +3,23 @@ library(tidyverse)
 
 AllWhalesAvgs <- AllWhalesLungeTableTrunc %>%
   group_by(Species,whaleName) %>%
-  summarize(Location = Location,
-            meanDepth = mean(depth),
+  summarize(meanDepth = mean(depth),
             meanLengthAcc = mean(LengthAcc),
             meanLengthDecel = mean(LengthDecel),
+            meanMassSKR = mean(MassSKR),
             meanTotLength = mean(TotLength),
+            meanPitchBegDecel = mean(PitchBegDecel),
             meanSpdBegDecel = mean(SpdBegDecel),
             meanPeriod = mean(Period),
             meanEnCostMS = mean(EnCostMS),
             meanEnCostkJ = mean(EnCostkJ),
-            meanEnPerLungeShirel = mean(EnPerLungeShirel),
+            meanEnPerLungeDirectAdjust = mean(EnPerLungeDirectAdjust),
+            meanEnPerLungeDirectAdjustMS = mean(EnPerLungeDirectAdjustMS),
+            meanModelWaterEngulfFullDirectAdjust = mean(ModelWaterEngulfFullDirectAdjust),
+            meanModelWaterEngulfFullEllipse = mean(ModelWaterEngulfFullEllipse),
             meanModelWaterEngulfFullShirel = mean(ModelWaterEngulfFullShirel),
-            meanEnRatioShirel = mean(EnRatioShirel),
-            StrokesPerAccel = (mean(LengthAcc)/mean(Period))) # %>%
-  # select(-LungeI,-timeoflunge)
+            meanEnRatioDirectAdjust = mean(EnRatioDirectAdjust),
+            StrokesPerAccel = (mean(LengthAcc)/mean(Period)))
 
 usethis::use_data(AllWhalesAvgs, overwrite = TRUE)
+
