@@ -29,7 +29,6 @@ fig1 <- function() {
   dragReg <- function(x) 6.1389 * x^(-0.954)
 
   p2 <- ggplot(LungeKinematics::SpeedSeries, aes(secs, Speed, group = Species)) +
-    #geom_path(aes(group = interaction(IndNum,lunge), color = Species, alpha = 0.05)) +
     stat_smooth(geom = "line", aes(group = IndNum, color = Species),
                 method = "loess", alpha = 0.2, span = 0.08, size = 2, se = FALSE) +
     geom_smooth(aes(color = Species),

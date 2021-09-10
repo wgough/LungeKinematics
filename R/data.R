@@ -45,5 +45,3 @@
 #' }
 #' @source \url{http://www.FIXME.info/}
 "LitMaxSpeeds"
-
-##Testing THings FOr Github

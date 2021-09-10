@@ -2,4 +2,10 @@
 
 export()
 export(fig1)
+export(fig2)
+export(fig3)
+export(fig4)
+export(fig5)
+export(geom_flat_violin)
 import(dplyr)
+import(ggplot2)

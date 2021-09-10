@@ -1,7 +1,7 @@
 ## code to prepare `SpeedSeries` dataset goes here
 library(tidyverse)
 
-AllWhalesAccelMetaData <- read_csv("data-raw/AllWhalesAccelMetadata.csv")
+AllWhalesMetaData <- read_csv("data-raw/AllWhalesMetadata.csv")
 
 SpeedSeries <- read_csv("data-raw/SpdSeriesMaxSpdCenter.csv",
                         col_names = as.character(1:1001)) %>%
@@ -11,6 +11,6 @@ SpeedSeries <- read_csv("data-raw/SpdSeriesMaxSpdCenter.csv",
   mutate(Frame = as.numeric(Frame),
          secs = (Frame/10)-50) %>%
   filter(!is.nan(Speed)) %>%
-  left_join(AllWhalesAccelMetaData, by = "IndNum")
+  left_join(AllWhalesMetaData, by = "IndNum")
 
 usethis::use_data(SpeedSeries, overwrite = TRUE)

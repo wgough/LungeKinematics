@@ -1,5 +1,18 @@
-Species,Mass,EnRatio
-Weddell,461.3,10.2
-Otter,25,3.8
-AfWildDog,25,2.2
-Lion,170,3.8
+Source,Species,Mass,EnRatio,log10_Mass,log10_EnRatio,Feeding_Type,Group,Spec_Abbrev
+"Williams and Yeates, 2004",Leptonychotes_weddellii,461.3,10.2,2.663983455,1.008600172,Single-prey,Other,Lw
+"Williams and Yeates, 2004",Enhydra_lutris,25,3.8,1.397940009,0.579783597,Single-prey,Other,El
+"Williams and Yeates, 2004",Lycaon_pictus,25,2.2,1.397940009,0.342422681,Single-prey,Other,Lp
+"Williams and Yeates, 2004",Panthera leo,170,3.8,2.230448921,0.579783597,Single-prey,Other,Pl
+"Goldbogen et al., 2019",Balaenoptera_bonaerensis,7000.031591,21.32553818,3.8451,1.3289,Filter,Rorqual,Bbo
+"Goldbogen et al., 2019",Balaenoptera_musculus,97006.31338,103.8723602,4.9868,2.0165,Filter,Rorqual,Bm
+"Goldbogen et al., 2019",Balaenoptera_physalus,47043.54057,188.3215413,4.6725,2.2749,Filter,Rorqual,Bp
+"Goldbogen et al., 2019",Berardius_bairdii,11898.71329,5.299074191,4.0755,0.7242,Single-prey,Odontocete,Bba
+"Goldbogen et al., 2019",Physeter_macrocephalus,19301.89728,5.499206144,4.2856,0.7403,Single-prey,Odontocete,Pm
+"Goldbogen et al., 2019",Globicephala_macrorhynchus,979.9411611,11.26937939,2.9912,1.0519,Single-prey,Odontocete,Gma
+"Goldbogen et al., 2019",Globicephala_melas,1200.05182,19.18227002,3.0792,1.2829,Single-prey,Odontocete,Gme
+"Goldbogen et al., 2019",Grampus_griseus,350.0257542,15.63507612,2.5441,1.1941,Single-prey,Odontocete,Gg
+"Goldbogen et al., 2019",Megaptera_novaeangliae,28002.70595,152.7214364,4.4472,2.1839,Filter,Rorqual,Mn
+"Goldbogen et al., 2019",Mesoplodon_densirostris,860.0030669,2.910046978,2.9345,0.4639,Single-prey,Odontocete,Md
+"Goldbogen et al., 2019",Orcinus_orca,2999.853181,5.680675741,3.4771,0.7544,Single-prey,Odontocete,Oo
+"Goldbogen et al., 2019",Ziphius_cavirostris,2900.013369,2.682872291,3.4624,0.4286,Single-prey,Odontocete,Zc
+"Goldbogen et al., 2019",Phocoena_phocoena,32.99894079,10.83926914,1.5185,1.035,Single-prey,Odontocete,Pp
