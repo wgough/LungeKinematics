@@ -15,14 +15,14 @@ fig3 <- function() {
     geom_smooth(method = lm, aes(log10(meanTotLength),log10(meanModelWaterEngulfFullEllipse)), color = "black", linetype = 2, se = TRUE) +
     geom_smooth(method = lm, aes(log10(meanTotLength),log10(meanModelWaterEngulfFullShirel)), color = "black", linetype = 3, se = TRUE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = "Log10 Body Length (m))",
-         y = "Log10 Water Engulfed (m^3)") +
+    labs(x = bquote("Log"^10*" Body Length (m)"),
+         y = bquote("Log"^10*" Water Engulfed (m"^3*")")) +
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 20),
           axis.title = element_text(size = 24),
           legend.position = "none",
           panel.grid.minor = element_blank())
 
-  ggsave("figs/fig3.pdf", height = 480, width = 960, units = "mm", dpi = 300)
+  ggsave("figs/fig3.pdf", height = 480, width = 480, units = "mm", dpi = 300)
 
 }
