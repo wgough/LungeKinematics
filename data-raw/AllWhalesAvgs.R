@@ -19,6 +19,8 @@ AllWhalesAvgs <- AllWhalesLungeTableTrunc %>%
             meanModelWaterEngulfFullEllipse = mean(ModelWaterEngulfFullEllipse),
             meanModelWaterEngulfFullShirel = mean(ModelWaterEngulfFullShirel),
             meanEnRatioDirectAdjust = mean(EnRatioDirectAdjust),
+            meanEnRatioDive = mean(EnRatioDive),
+            meanEnRatioDay = mean(EnRatioDay),
             StrokesPerAccel = (mean(LengthAcc)/mean(Period)))
 
 usethis::use_data(AllWhalesAvgs, overwrite = TRUE)

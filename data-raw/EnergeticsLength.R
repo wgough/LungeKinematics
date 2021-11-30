@@ -5,7 +5,9 @@ AllWhalesEnergyOutAbsSummary <- summarySE(LungeKinematics::AllWhalesLungeTableTr
 AllWhalesEnergyOutMSSummary <- summarySE(LungeKinematics::AllWhalesLungeTableTrunc, measurevar="EnCostMS", groupvars=c("whaleName"))
 AllWhalesEnergyInAbsSummary <- summarySE(LungeKinematics::AllWhalesLungeTableTrunc, measurevar="EnPerLungeDirectAdjust", groupvars=c("whaleName"))
 AllWhalesEnergyInMSSummary <- summarySE(LungeKinematics::AllWhalesLungeTableTrunc, measurevar="EnPerLungeDirectAdjustMS", groupvars=c("whaleName"))
-AllWhalesEnergyRatioSummary <- summarySE(LungeKinematics::AllWhalesLungeTableTrunc, measurevar="EnRatioDirectAdjust", groupvars=c("whaleName"))
+AllWhalesEnergyRatioLungeSummary <- summarySE(LungeKinematics::AllWhalesLungeTableTrunc, measurevar="EnRatioDirectAdjust", groupvars=c("whaleName"))
+AllWhalesEnergyRatioDiveSummary <- summarySE(LungeKinematics::AllWhalesLungeTableTrunc, measurevar="EnRatioDive", groupvars=c("whaleName"))
+AllWhalesEnergyRatioDaySummary <- summarySE(LungeKinematics::AllWhalesLungeTableTrunc, measurevar="EnRatioDay", groupvars=c("whaleName"))
 
 EnergyOutAbsLength <- LungeKinematics::AllWhalesAvgs %>%
   select(Species, whaleName, meanTotLength) %>%
@@ -31,16 +33,30 @@ EnergyInMSLength <- LungeKinematics::AllWhalesAvgs %>%
   mutate(quartgain25 = EnPerLungeDirectAdjustMS_mean-(0.5*iqr),
          quartgain75 = EnPerLungeDirectAdjustMS_mean+(0.5*iqr))
 
-EnergyRatioLength <- LungeKinematics::AllWhalesAvgs %>%
+EnergyRatioLungeLength <- LungeKinematics::AllWhalesAvgs %>%
   select(Species, whaleName, meanTotLength) %>%
-  left_join(AllWhalesEnergyRatioSummary, EnergyRatioLength, by = "whaleName") %>%
+  left_join(AllWhalesEnergyRatioLungeSummary, EnergyRatioLungeLength, by = "whaleName") %>%
   mutate(quartratio25 = EnRatioDirectAdjust_mean-(0.5*iqr),
          quartratio75 = EnRatioDirectAdjust_mean+(0.5*iqr))
+
+EnergyRatioDiveLength <- LungeKinematics::AllWhalesAvgs %>%
+  select(Species, whaleName, meanTotLength) %>%
+  left_join(AllWhalesEnergyRatioDiveSummary, EnergyRatioDiveLength, by = "whaleName") %>%
+  mutate(quartratio25 = EnRatioDive_mean-(0.5*iqr),
+         quartratio75 = EnRatioDive_mean+(0.5*iqr))
+
+EnergyRatioDayLength <- LungeKinematics::AllWhalesAvgs %>%
+  select(Species, whaleName, meanTotLength) %>%
+  left_join(AllWhalesEnergyRatioDaySummary, EnergyRatioDayLength, by = "whaleName") %>%
+  mutate(quartratio25 = EnRatioDay_mean-(0.5*iqr),
+         quartratio75 = EnRatioDay_mean+(0.5*iqr))
 
 usethis::use_data(EnergyOutAbsLength, overwrite = TRUE)
 usethis::use_data(EnergyOutMSLength, overwrite = TRUE)
 usethis::use_data(EnergyInAbsLength, overwrite = TRUE)
 usethis::use_data(EnergyInMSLength, overwrite = TRUE)
-usethis::use_data(EnergyRatioLength, overwrite = TRUE)
+usethis::use_data(EnergyRatioLungeLength, overwrite = TRUE)
+usethis::use_data(EnergyRatioDiveLength, overwrite = TRUE)
+usethis::use_data(EnergyRatioDayLength, overwrite = TRUE)
 
 

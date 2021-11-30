@@ -20,7 +20,6 @@ fig1 <- function() {
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 30),
           axis.title = element_text(size = 36),
-          axis.title.x = element_blank(),
           legend.position = "none",
           panel.grid.minor = element_blank())
 
@@ -43,8 +42,10 @@ fig1 <- function() {
     geom_vline(xintercept = 0) +
     geom_boxplot(aes(fill = Species, group = fct_cross(kinematic, Species)),
                  data = TimesBySpecies,
-                 position = position_identity()) +
+                 position = position_identity(),
+                 size = 1) +
     scale_color_manual(values = pal) +
+    scale_fill_manual(values = pal) +
     scale_x_continuous(breaks = seq(-25,15,5), limits = c(-25,15)) +
     ylim(0,8) +
     labs(x = "Time (s)",
@@ -52,7 +53,6 @@ fig1 <- function() {
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 30),
           axis.title = element_text(size = 36),
-          axis.title.x = element_blank(),
           legend.position = "none",
           panel.grid.minor = element_blank())
 
