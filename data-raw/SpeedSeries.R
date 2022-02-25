@@ -2,6 +2,8 @@
 library(tidyverse)
 
 AllWhalesMetaData <- read_csv("data-raw/AllWhalesMetadata.csv")
+AllWhalesMetaData <- select(AllWhalesMetaData, -c(Species)) %>%
+  left_join(AllWhalesAvgs %>% select(whaleName,meanModelWaterEngulfFull), by = "whaleName")
 
 SpeedSeries <- read_csv("data-raw/SpdSeriesMaxSpdCenter.csv",
                         col_names = as.character(1:1001)) %>%

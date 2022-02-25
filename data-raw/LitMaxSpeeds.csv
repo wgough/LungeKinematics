@@ -1,7 +1,0 @@
-Source,Species,Prey,MaxSpeed,MaxSpeedSD,EstimatedSize
-Cade_2016,Blue,Krill,3.9,0.8,22.319
-Cade_2016,Humpback,Krill,2.7,0.7,11.22
-Cade_2016,Humpback,Fish,2.5,0.4,11.22
-Goldbogen_2012,Blue,Krill,3.7,0.4,22.319
-Goldbogen_2012,Fin,Krill,3,0.4,19.33
-Goldbogen_2012,Humpback,Krill,2.3,0.1,11.22
