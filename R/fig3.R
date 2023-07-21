@@ -37,8 +37,8 @@ fig3 <- function() {
                 linetype = 2,
                 se = TRUE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Body Length (m)"),
-         y = bquote("log"^10*" Jaw Area (m"^2*")")) +
+    labs(x = bquote("Log"[10]*" Body Length (m)"),
+         y = bquote("log"[10]*" Jaw Area (m"^2*")")) +
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 30),
           axis.title = element_text(size = 36),

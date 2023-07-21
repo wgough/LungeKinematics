@@ -12,8 +12,8 @@ fig6 <- function() {
     geom_point(aes(fill = Species, size = TotLength), color = "black", shape = 21, alpha = 0.5) +
     geom_smooth(method = lm, aes(group = whaleName, colour = Species, fill = Species), se = FALSE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Speed At Mouth Opening (m s"^-1*")"),
-         y = bquote("Log"^10*" Lunge Energetic Cost (kJ)")) +
+    labs(x = bquote("Log"[10]*" Speed At Mouth Opening (m s"^-1*")"),
+         y = bquote("Log"[10]*" Lunge Energetic Cost (kJ)")) +
     scale_size(range = c(2,6)) +
     ylim(1,6) +
     theme_classic(base_size = 8) +
@@ -27,8 +27,8 @@ fig6 <- function() {
     geom_point(aes(fill = Species, size = TotLength), color = "black", shape = 21, alpha = 0.5) +
     geom_smooth(method = lm, aes(group = whaleName, colour = Species, fill = Species), se = FALSE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Speed At Mouth Opening (m s"^-1*")"),
-         y = bquote("Log"^10*" Mass-Specific Lunge Energetic Cost (kJ kg"^-1*")")) +
+    labs(x = bquote("Log"[10]*" Speed At Mouth Opening (m s"^-1*")"),
+         y = bquote("Log"[10]*" Mass-Specific Lunge Energetic Cost (kJ kg"^-1*")")) +
     scale_size(range = c(2,6)) +
     ylim(1,4) +
     theme_classic(base_size = 8) +
@@ -41,8 +41,8 @@ fig6 <- function() {
     geom_point(aes(fill = Species, size = TotLength), color = "black", shape = 21, alpha = 0.5) +
     geom_smooth(method = lm, aes(group = whaleName, colour = Species, fill = Species), se = FALSE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Speed At Mouth Opening (m s"^-1*")"),
-         y = bquote("Log"^10*" Lunge Energetic Gain (kJ)")) +
+    labs(x = bquote("Log"[10]*" Speed At Mouth Opening (m s"^-1*")"),
+         y = bquote("Log"[10]*" Lunge Energetic Gain (kJ)")) +
     scale_size(range = c(2,6)) +
     ylim(1,6) +
     theme_classic(base_size = 8) +
@@ -56,8 +56,8 @@ fig6 <- function() {
     geom_point(aes(fill = Species, size = TotLength), color = "black", shape = 21, alpha = 0.5) +
     geom_smooth(method = lm, aes(group = whaleName, colour = Species, fill = Species), se = FALSE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Speed At Mouth Opening (m s"^-1*")"),
-         y = bquote("Log"^10*" Mass-Specific Lunge Energetic Gain (kJ kg"^-1*")")) +
+    labs(x = bquote("Log"[10]*" Speed At Mouth Opening (m s"^-1*")"),
+         y = bquote("Log"[10]*" Mass-Specific Lunge Energetic Gain (kJ kg"^-1*")")) +
     scale_size(range = c(2,6)) +
     ylim(1,4) +
     theme_classic(base_size = 8) +
@@ -70,8 +70,8 @@ fig6 <- function() {
     geom_point(aes(fill = Species, size = TotLength), color = "black", shape = 21, alpha = 0.5) +
     geom_smooth(method = lm, aes(group = whaleName, colour = Species, fill = Species), se = FALSE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Speed At Mouth Opening (m s"^-1*")"),
-         y = bquote("Log"^10*" Water Engulfed (m s"^3*")")) +
+    labs(x = bquote("Log"[10]*" Speed At Mouth Opening (m s"^-1*")"),
+         y = bquote("Log"[10]*" Water Engulfed (m s"^3*")")) +
     scale_size(range = c(2,6)) +
     ylim(0,3) +
     theme_classic(base_size = 8) +
@@ -85,8 +85,8 @@ fig6 <- function() {
     geom_point(aes(fill = Species, size = TotLength), color = "black", shape = 21, alpha = 0.5) +
     geom_smooth(method = lm, aes(group = whaleName, colour = Species, fill = Species), se = FALSE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Speed At Mouth Opening (m s"^-1*")"),
-         y = bquote("Log"^10*" Lunge Energetic Gain/Cost Ratio")) +
+    labs(x = bquote("Log"[10]*" Speed At Mouth Opening (m s"^-1*")"),
+         y = bquote("Log"[10]*" Lunge Energetic Gain/Cost Ratio")) +
     scale_size(range = c(2,6)) +
     ylim(0,3) +
     theme_classic(base_size = 8) +

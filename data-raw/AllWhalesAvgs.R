@@ -1,8 +1,6 @@
 ## code to prepare `AllWhalesAvgs` dataset goes here
 library(tidyverse)
 
-
-
 AllWhalesAvgs <- AllWhalesLungeTableTrunc %>%
   group_by(Species,whaleName) %>%
   summarize(meanDepth = mean(depth),

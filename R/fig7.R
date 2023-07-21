@@ -29,8 +29,8 @@ fig7 <- function() {
                 se = TRUE) +
     scale_color_manual(values = pal,
                        aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Body Length (m)"),
-         y = bquote("Log"^10*" Water Engulfed (m"^3*")")) +
+    labs(x = bquote("Log"[10]*" Body Length (m)"),
+         y = bquote("Log"[10]*" Water Engulfed (m"^3*")")) +
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 20),
           axis.title = element_text(size = 24),
@@ -67,8 +67,8 @@ fig7 <- function() {
                 linetype = 2,
                 se = TRUE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Body Length (m)"),
-         y = bquote("Log"^10*" Lunge Energy (kJ)")) +
+    labs(x = bquote("Log"[10]*" Body Length (m)"),
+         y = bquote("Log"[10]*" Lunge Energy (kJ)")) +
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 30),
           axis.title = element_text(size = 36),
@@ -119,8 +119,8 @@ fig7 <- function() {
                 linetype = 3,
                 se = TRUE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Body Length (m)"),
-         y = bquote("Log"^10*" Lunge Energetic Ratio")) +
+    labs(x = bquote("Log"[10]*" Body Length (m)"),
+         y = bquote("Log"[10]*" Lunge Energetic Ratio")) +
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 30),
           axis.title = element_text(size = 36),

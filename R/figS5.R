@@ -28,12 +28,11 @@ figS5 <- function() {
                 linetype = 2,
                 se = TRUE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Body Length (m)"),
-         y = bquote("Log"^10*" Bi-Zygomatic Width (m)")) +
+    labs(x = bquote("Log"[10]*" Body Length (m)"),
+         y = bquote("Log"[10]*" Bi-Zygomatic Width (m)")) +
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 30),
           axis.title = element_text(size = 36),
-          axis.title.x = element_blank(),
           legend.position = "none",
           panel.grid.minor = element_blank())
 
@@ -57,12 +56,11 @@ figS5 <- function() {
                 linetype = 2,
                 se = TRUE) +
     scale_color_manual(values = pal, aesthetics = c("fill","colour")) +
-    labs(x = bquote("Log"^10*" Body Length (m)"),
-         y = bquote("Log"^10*" Rostrum-to-Blowhole Length (m)")) +
+    labs(x = bquote("Log"[10]*" Body Length (m)"),
+         y = bquote("Log"[10]*" Rostrum-to-Blowhole Length (m)")) +
     theme_classic(base_size = 8) +
     theme(axis.text = element_text(size = 30),
           axis.title = element_text(size = 36),
-          axis.title.x = element_blank(),
           legend.position = "none",
           panel.grid.minor = element_blank())
 
